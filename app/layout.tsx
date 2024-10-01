@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nunito, Nunito_Sans} from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'; // Removido 'Nunito'
 import Image from "next/image";
 
-const nunitoSans = Nunito_Sans ({ subsets: ["latin"]});
-
-
+// Usando apenas Nunito_Sans
+const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lista de países",
@@ -27,14 +26,14 @@ export default function RootLayout({
                 src="/logo.svg" 
                 alt="Logo da aplicação - Emoji do planeta Terra" 
                 width={48} 
-                height={48}/>
+                height={48}
+              />
               <h1 className="font-bold text-2xl">Lista de países</h1>
             </section>
-          
           </nav>
           {children}
         </main>
-        </body>
+      </body>
     </html>
   );
 }
